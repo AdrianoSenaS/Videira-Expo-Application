@@ -22,16 +22,16 @@ const App: React.FC = () => {
     <ThemeProvider>
       <NavigationContainer >
         <Stack.Navigator initialRouteName="Home" >
-          <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Igreja' component={IgrejaScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Configuracao' component={Configuracao} options={{headerShown:false}}/>
-          <Stack.Screen name='Conta' component={ContaScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Endereco' component={EnderecoSreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Escola' component={EscolaSrecreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Eventos' component={EventoSreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Ofertas' component={OfertaScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Oracao' component={OracaoScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Palavras' component={PalavaraScreen} options={{headerShown:false}}/>
+          <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Igreja' component={IgrejaScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Configuracao' component={Configuracao} options={{ headerShown: false }} />
+          <Stack.Screen name='Conta' component={ContaScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Endereco' component={EnderecoSreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Escola' component={EscolaSrecreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Eventos' component={EventoSreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Ofertas' component={OfertaScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Oracao' component={OracaoScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='Palavras' component={PalavaraScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
