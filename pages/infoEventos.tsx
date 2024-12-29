@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, ImageBackground, Text, TouchableOpacity, SafeAreaView } from "react-native";
 import { useTheme } from '../themes/ThemeContext';
 import { lightTheme, darkTheme } from '../themes/Themes';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -23,7 +23,9 @@ const InfoEvento: React.FC = ({ route, navigation }: any) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-            <View style={{ backgroundColor: currentTheme.backgroundColor, padding: 10, }}>
+            <View style={{ width: '100%', height: 250, backgroundColor: currentTheme.colorSecondary }}>
+                <ImageBackground style={{ width: '100%', height: '100%' }} source={{ uri: image }} >
+                <View style={{ padding: 10, }}>
                 <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
                     <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
                         <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
@@ -31,8 +33,7 @@ const InfoEvento: React.FC = ({ route, navigation }: any) => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <View style={{ width: '100%', height: 250, backgroundColor: currentTheme.colorSecondary }}>
-                <Image style={{ width: '100%', height: '100%' }} source={{ uri: image }} />
+                </ImageBackground>
             </View>
             <View style={{ padding: 5 }}>
                 <View style={{ borderRadius: 5, borderWidth: 1, borderColor: currentTheme.bordercolor }}>
