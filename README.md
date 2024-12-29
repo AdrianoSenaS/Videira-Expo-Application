@@ -1,4 +1,8 @@
 # 🌿 **App Igreja Videira Chapadão do Céu**  
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3eeeeed8-d215-4981-b82d-2d5c1c2307b6" alt="ASIptvServer Logo" />
+</p>
+
 
 Seja bem-vindo ao aplicativo oficial da **Igreja Videira Chapadão do Céu**! 🌟  
 Conecte-se com nossa comunidade, participe de eventos e acompanhe todas as novidades em um só lugar.  
