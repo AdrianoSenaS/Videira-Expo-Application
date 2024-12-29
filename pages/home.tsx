@@ -42,54 +42,54 @@ const HomeScreen: React.FC<any> = ({ navigation }) => {
             <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: 60 }}>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Igreja')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <AntDesign name="home" size={70} color={currentTheme.iconColor} />
+                  <AntDesign name="home" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Igreja </Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Igreja </Text>
               </View>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Eventos')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <SimpleLineIcons name="event" size={60} color={currentTheme.iconColor} />
+                  <SimpleLineIcons name="event" size={60} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Eventos </Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Eventos </Text>
               </View>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Escola')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <Ionicons name="school-outline" size={70} color={currentTheme.iconColor} />
+                  <Ionicons name="school-outline" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Escola Videira</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Escola Videira</Text>
               </View>
             </View>
 
             <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', marginTop: 20 }}>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Oracao')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <FontAwesome6 name="book-bible" size={60} color={currentTheme.iconColor} />
+                  <FontAwesome6 name="book-bible" size={60} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Pedidos de</Text>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16 }}>oração</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Pedidos de</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16 }}>oração</Text>
               </View>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Ofertas')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <MaterialCommunityIcons name="offer" size={70} color={currentTheme.iconColor} />
+                  <MaterialCommunityIcons name="offer" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Ofertas</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Ofertas</Text>
               </View>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Palavras')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <Entypo name="open-book" size={70} color={currentTheme.iconColor} />
+                  <Entypo name="open-book" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Palavra da</Text>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16 }}>célula</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Palavra da</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16 }}>célula</Text>
               </View>
             </View>
 
             <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', alignContent: 'center', marginTop: 20 }}>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Endereco')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
-                  <MaterialCommunityIcons name="google-maps" size={70} color={currentTheme.iconColor} />
+                  <MaterialCommunityIcons name="google-maps" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16, marginTop: 5 }}>Endereço</Text>
-                <Text style={{ color: currentTheme.iconColor, fontSize: 16 }}> células</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Endereço</Text>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16 }}> células</Text>
               </View>
             </View>
           </View>

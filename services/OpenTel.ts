@@ -1,7 +1,7 @@
 import { Linking } from "react-native";
 
 const OpenTel = () => {
-    Linking.openURL('tel:+64933004882')
+    Linking.openURL('tel:6499696690')
 }
 
 export default OpenTel

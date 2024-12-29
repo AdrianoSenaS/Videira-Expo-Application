@@ -18,15 +18,15 @@ const IgrejaScreen: React.FC = ({ navigation }: any) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
       <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
-      <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
-        <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
-          <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Igreja</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={{ marginTop: 10, justifyContent: 'flex-start', alignItems: 'center', backgroundColor: currentTheme.backgroundColor }}>
-        <ImageBackground source={currentTheme.logoIgrejas} style={{ width: '100%', height: 200 }}>
+      <View style={{ justifyContent: 'flex-start', alignItems: 'center', backgroundColor: currentTheme.backgroundColor, height: 250 }}>
+        <ImageBackground source={currentTheme.logoIgrejas} style={{ width: '100%', height: '100%' }}>
           <View style={{ width: '100%', height: '100%', backgroundColor: currentTheme.IgejaColor }}>
+            <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
+              <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
+                <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
+                <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Igreja</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ImageBackground>
       </View>

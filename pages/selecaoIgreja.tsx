@@ -3,10 +3,8 @@ import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useTheme } from '../themes/ThemeContext';
 import { lightTheme, darkTheme } from '../themes/Themes';
 import DadosIgreja from "../services/SelecaoIgreja";
-import { SelecionarIgreja } from "../services/SelecaoIgreja";
 
-
-const SelecaoIgreja: React.FC = () => {
+const SelecaoIgreja: React.FC = ({navigation}:any) => {
     const { theme } = useTheme();
     const currentTheme = theme === 'light' ? lightTheme : darkTheme;
 
@@ -16,7 +14,7 @@ const SelecaoIgreja: React.FC = () => {
                 <FlatList data={DadosIgreja}
                     keyExtractor={(item) => item.id}
                     renderItem={({ item }) => (
-                        <TouchableOpacity onPress={() => SelecionarIgreja(item)} style={{ width: '97%', alignSelf: 'flex-end', padding: 20, borderBottomWidth: 1, borderColor: currentTheme.bordercolor }}>
+                        <TouchableOpacity onPress={() => navigation.navigate('InfoIgreja', item)} style={{ width: '97%', alignSelf: 'flex-end', padding: 20, borderBottomWidth: 1, borderColor: currentTheme.bordercolor }}>
                             <Text style={{ color: currentTheme.textColor }}>{item.nome}</Text>
                         </TouchableOpacity>
                     )}
