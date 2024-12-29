@@ -1,21 +1,33 @@
 {
-  "name": "videira-chc",
+  "name": "videira",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~4.0.0",
+    "@react-navigation/material-top-tabs": "^7.1.0",
+    "@react-navigation/native": "^7.0.14",
+    "@react-navigation/stack": "^7.1.1",
+    "bootstrap-icons": "^1.11.3",
     "expo": "~52.0.23",
+    "expo-cli": "^6.3.12",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
-    "react-native": "0.76.5",
     "react-dom": "18.3.1",
-    "react-native-web": "~0.19.13",
-    "@expo/metro-runtime": "~4.0.0"
+    "react-native": "0.76.5",
+    "react-native-appearance": "^0.3.4",
+    "react-native-gesture-handler": "^2.21.2",
+    "react-native-open-maps": "^0.4.3",
+    "react-native-pager-view": "6.5.1",
+    "react-native-reanimated": "^3.16.6",
+    "react-native-safe-area-context": "^5.0.0",
+    "react-native-screens": "^4.4.0",
+    "react-native-web": "~0.19.13"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

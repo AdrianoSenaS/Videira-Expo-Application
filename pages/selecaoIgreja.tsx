@@ -1,0 +1,32 @@
+import React from "react";
+import { View, Text, Alert, FlatList, TouchableOpacity} from "react-native";
+import { useTheme } from '../themes/ThemeContext';
+import { lightTheme, darkTheme } from '../themes/Themes';
+
+const dados =[
+    {id:'0', nome:'Videira Chapadão do Céu'},
+];
+
+
+const SelecaoIgreja: React.FC = ()=>{
+    const { theme} = useTheme();
+    const currentTheme = theme === 'light' ? lightTheme : darkTheme;  
+    const handleItemPress = (item: any): void => {
+        Alert.alert('Você clicou no:', item.nome);
+    };
+    return(
+       <View style={{flex:1, backgroundColor:currentTheme.backgroundColor}}>
+         <View style={{ backgroundColor:currentTheme.backgroundColor, margin:10 ,borderWidth:1, borderRadius:5, borderColor:currentTheme.bordercolor}}>
+            <FlatList data={dados}
+            keyExtractor={(item)=>item.id}
+            renderItem={({item})=>(
+                <TouchableOpacity onPress={()=>handleItemPress(item)} style={{ width:'97%', alignSelf:'flex-end', padding: 20, borderBottomWidth: 1, borderColor:currentTheme.bordercolor }}>
+                <Text style={{color:currentTheme.textColor}}>{item.nome}</Text>
+                </TouchableOpacity> 
+            )}
+            />
+        </View>
+       </View>
+    );
+}
+export default SelecaoIgreja;
