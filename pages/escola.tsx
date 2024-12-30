@@ -102,7 +102,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
       <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Voltar</Text>
+          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Escola Videria</Text>
         </TouchableOpacity>
       </View>
       <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor: currentTheme.backgroundColor }}>
