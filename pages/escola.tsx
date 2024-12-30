@@ -99,69 +99,69 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
       <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
-      <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop:10 }}>
-                    <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
-                        <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-                        <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Voltar</Text>
-                    </TouchableOpacity>
-                </View>
+      <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
+        <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
+          <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
+          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Voltar</Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor: currentTheme.backgroundColor }}>
         <Text style={{ color: currentTheme.textColor }}> Página para Escola</Text>
       </View>
       <ScrollView>
-              <View style={{ backgroundColor: currentTheme.backgroundColor }}>
-                <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
-                  <Text style={{ color: currentTheme.textColor, fontSize: 20, fontWeight: 'bold' }}>Cursos em Destaques</Text>
+        <View style={{ backgroundColor: currentTheme.backgroundColor }}>
+          <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
+            <Text style={{ color: currentTheme.textColor, fontSize: 20, fontWeight: 'bold' }}>Cursos em Destaques</Text>
+          </View>
+          <FlatList
+            scrollEnabled={false}
+            data={data}
+            keyExtractor={(item) => item.id}
+            renderItem={(item) => (
+              <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
+                <View style={{ margin: 20, backgroundColor: currentTheme.colorSecondary, width: "80%", borderRadius: 10 }} >
+                  <Image source={{ uri: item.item.image }} style={{ height: 150, width: "100%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
+
+                  </Image>
+                  <Text style={{ margin: 10, color: currentTheme.buttonColor, fontSize: 13 }}>
+                    {item.item.data}
+                  </Text>
+                  <Text style={{ marginLeft: 10, fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
+                    {item.item.evento}
+                  </Text>
+                  <Text style={{ marginTop: 30, fontSize: 12, padding: 10, color: currentTheme.textColorSecondary }}>
+                    {item.item.local}
+                  </Text>
                 </View>
-                <FlatList
-                  scrollEnabled={false}
-                  data={data}
-                  keyExtractor={(item) => item.id}
-                  renderItem={(item) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
-                      <View style={{ margin: 20, backgroundColor: currentTheme.colorSecondary, width: "80%", borderRadius: 10 }} >
-                        <Image source={{ uri: item.item.image }} style={{ height: 150, width: "100%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
-      
-                        </Image>
-                        <Text style={{ margin: 10, color: currentTheme.buttonColor, fontSize: 13 }}>
-                          {item.item.data}
-                        </Text>
-                        <Text style={{ marginLeft: 10, fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
-                          {item.item.evento}
-                        </Text>
-                        <Text style={{ marginTop: 30, fontSize: 12, padding: 10, color: currentTheme.textColorSecondary }}>
-                          {item.item.local}
-                        </Text>
-                      </View>
-                    </TouchableOpacity>
-                  )} />
-                <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
-                  <Text style={{ color: currentTheme.textColor, fontSize: 20, fontWeight: 'bold' }}> Cursos</Text>
+              </TouchableOpacity>
+            )} />
+          <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
+            <Text style={{ color: currentTheme.textColor, fontSize: 20, fontWeight: 'bold' }}> Cursos</Text>
+          </View>
+          <FlatList
+            scrollEnabled={false}
+            data={data1}
+            keyExtractor={(item) => item.id}
+            renderItem={(item) => (
+              <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
+                <View style={{ padding: 10, flexDirection: 'row' }}>
+                  <View style={{ marginLeft: 10 }}>
+                    <Image source={{ uri: item.item.image }} style={{ width: 150, height: 100, borderRadius: 10 }} />
+                  </View>
+                  <View style={{ paddingLeft: 10, width: '60%' }}>
+                    <Text style={{ color: currentTheme.buttonColor, fontSize: 13 }}>
+                      {item.item.data}
+                    </Text>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
+                      {item.item.evento}
+                    </Text>
+                  </View>
                 </View>
-                <FlatList
-                  scrollEnabled={false}
-                  data={data1}
-                  keyExtractor={(item) => item.id}
-                  renderItem={(item) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
-                      <View style={{ padding: 10, flexDirection: 'row' }}>
-                        <View style={{ marginLeft: 10 }}>
-                          <Image source={{ uri: item.item.image }} style={{ width: 150, height: 100, borderRadius: 10 }} />
-                        </View>
-                        <View style={{ paddingLeft: 10, width: '60%' }}>
-                          <Text style={{ color: currentTheme.buttonColor, fontSize: 13 }}>
-                            {item.item.data}
-                          </Text>
-                          <Text style={{ fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
-                            {item.item.evento}
-                          </Text>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-                  )}
-                />
-              </View>
-            </ScrollView>
+              </TouchableOpacity>
+            )}
+          />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
