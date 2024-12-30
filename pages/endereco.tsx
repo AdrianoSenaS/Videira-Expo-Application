@@ -9,7 +9,6 @@ const EnderecoSreen: React.FC = ({ navigation }: any) => {
   const currentTheme = theme === 'light' ? lightTheme : darkTheme;
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-      <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
       <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
         <TouchableOpacity style={{ padding: 10 }} onPress={() => navigation.goBack()}>
           <Text style={{ color: currentTheme.textColor, fontSize: 16 }}>Voltar</Text>

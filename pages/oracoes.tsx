@@ -12,7 +12,6 @@ const OracaoScreen: React.FC = ({ navigation }: any) => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-      <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
       <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />

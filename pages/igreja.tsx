@@ -17,7 +17,6 @@ const IgrejaScreen: React.FC = ({ navigation }: any) => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-      <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
       <View style={{ justifyContent: 'flex-start', alignItems: 'center', backgroundColor: currentTheme.backgroundColor, height: 250 }}>
         <ImageBackground source={currentTheme.logoIgrejas} style={{ width: '100%', height: '100%' }}>
           <View style={{ width: '100%', height: '100%', backgroundColor: currentTheme.IgejaColor }}>
