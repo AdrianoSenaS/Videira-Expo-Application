@@ -118,7 +118,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
                   data={data}
                   keyExtractor={(item) => item.id}
                   renderItem={(item) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('InfoEvento', item.item)}>
+                    <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
                       <View style={{ margin: 20, backgroundColor: currentTheme.colorSecondary, width: "80%", borderRadius: 10 }} >
                         <Image source={{ uri: item.item.image }} style={{ height: 150, width: "100%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
       
@@ -143,7 +143,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
                   data={data1}
                   keyExtractor={(item) => item.id}
                   renderItem={(item) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('InfoEvento', item.item)}>
+                    <TouchableOpacity onPress={() => navigation.navigate('InfoCusrsos', item.item)}>
                       <View style={{ padding: 10, flexDirection: 'row' }}>
                         <View style={{ marginLeft: 10 }}>
                           <Image source={{ uri: item.item.image }} style={{ width: 150, height: 100, borderRadius: 10 }} />

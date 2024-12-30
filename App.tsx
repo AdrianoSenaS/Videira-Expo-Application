@@ -15,6 +15,7 @@ import OracaoScreen from './pages/oracoes';
 import PalavaraScreen from './pages/plavras';
 import InfoIgrejaScreen from './pages/infoIgreja';
 import InfoEvento from './pages/infoEventos';
+import InfoCursos from './pages/infoCursos';
 
 
 const Stack = createStackNavigator();
@@ -36,6 +37,7 @@ const App: React.FC = () => {
           <Stack.Screen name='Palavras' component={PalavaraScreen} options={{ headerShown: false }} />
           <Stack.Screen name='InfoIgreja' component={InfoIgrejaScreen} options={{ headerShown: false }} />
           <Stack.Screen name='InfoEvento' component={InfoEvento} options={{ headerShown: false }} />
+          <Stack.Screen name='InfoCusrsos' component={InfoCursos} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
