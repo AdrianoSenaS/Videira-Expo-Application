@@ -85,6 +85,12 @@ const InfoCursos: React.FC = ({ route, navigation }: any) => {
                     </View>
                 </View>
             </View>
+            <View style={{flex:1, alignItems:'center', justifyContent:'flex-end', padding:10}}>
+                <TouchableOpacity style={{backgroundColor:currentTheme.coloTextEvent, borderRadius:10, width:'100%', height:45, alignItems:'center', justifyContent:'center', marginBottom:20}}>
+                    <Text style={{fontSize:16, color:currentTheme.textColor, fontWeight:'600'}}>Tickets</Text>
+                </TouchableOpacity>
+        </View>
+           
         </SafeAreaView>
     )
 }

@@ -16,6 +16,7 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada',
       local: 'Igreja videira',
+      checkout:'Inscições abertas',
       sobre: 'descrição do evento da igreja'
     }
   ]
@@ -23,74 +24,82 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
   const data1 = [
     {
       id: '1',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada',
       local: 'Igreja videira',
+      checkout:'Inscições abertas',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '2',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada tudo para sempre - juntos ',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '3',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '4',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada tudo para sempre - juntos ',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '5',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '6',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada tudo para sempre - juntos ',
       local: 'Igreja videira',
+      checkout:'Inscições abertas',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '7',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     },
     {
       id: '8',
-      destaque: 'false',
+      destaque: '',
       image: 'https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       data: 'QUA, 01 JAN 00:00',
       evento: 'Jantar Culto da virada tudo para sempre - juntos ',
       local: 'Igreja videira',
+      checkout:'',
       sobre: 'descrição do evento da igreja'
     }
   ]
@@ -127,10 +136,20 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
                   <Text style={{ marginLeft: 10, fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
                     {item.item.evento}
                   </Text>
-                  <Text style={{ marginTop: 30, fontSize: 12, padding: 10, color: currentTheme.textColorSecondary }}>
+                  {(()=>{
+                    if( item.item.checkout !== ''){
+                      return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end', marginTop:10, marginLeft:10}}>
+                        <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
+                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                        </View>
+                      </View>
+                    }
+                   })()}
+                  <Text style={{ marginTop: 10, fontSize: 12, padding: 10, color: currentTheme.textColorSecondary }}>
                     {item.item.local}
                   </Text>
                 </View>
+               
               </TouchableOpacity>
             )} />
           <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
@@ -153,6 +172,15 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
                     <Text style={{ fontSize: 16, fontWeight: 'bold', color: currentTheme.textColor }}>
                       {item.item.evento}
                     </Text>
+                   {(()=>{
+                    if( item.item.checkout !== ''){
+                      return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end'}}>
+                        <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
+                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                        </View>
+                      </View>
+                    }
+                   })()}
                   </View>
                 </View>
               </TouchableOpacity>
