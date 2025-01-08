@@ -14,10 +14,9 @@ import Entypo from '@expo/vector-icons/Entypo';
 const HomeScreen: React.FC<any> = ({ navigation }) => {
   const { theme, toggleTheme } = useTheme();
   let currentTheme = theme === 'light' ? lightTheme : darkTheme;
-  let vefiTeheme = theme;
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-      <StatusBar barStyle={vefiTeheme === 'light' ? 'dark-content' : 'light-content'} />
+      <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
       <ImageBackground source={currentTheme.backgroundImage} style={{ flex: 1, justifyContent: 'center', width: '100%' }}>
         <View style={{ justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', backgroundColor: currentTheme.HomeColor }}>
           <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
