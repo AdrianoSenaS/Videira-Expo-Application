@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, SafeAreaView, StatusBar } from "react-native";
+import { View, Text, TouchableOpacity, SafeAreaView, StatusBar, ImageBackground } from "react-native";
 import { useTheme } from '../themes/ThemeContext';
 import { lightTheme, darkTheme } from '../themes/Themes';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -18,6 +18,16 @@ const Ticket: React.FC = ({navigation}:any) => {
                         <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Voltar</Text>
                     </TouchableOpacity>
                 </View>
+            </View>
+            <View style={{padding:10, alignItems:'center', justifyContent:'center'}}>
+                <Text style={{color:currentTheme.textColor, fontWeight:'bold', fontSize:25}}>Reserve agora</Text>
+            </View>
+            <View style={{ alignItems:'center', justifyContent:'center'}}>
+                <ImageBackground
+                style={{width:'100%',height:250,}}
+                source={ require('../assets/ticket.png')}>
+
+                </ImageBackground>
             </View>
             </View>
         </SafeAreaView>
