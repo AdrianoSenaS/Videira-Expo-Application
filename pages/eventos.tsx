@@ -127,9 +127,7 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
             renderItem={(item) => (
               <TouchableOpacity onPress={() => navigation.navigate('InfoEvento', item.item)}>
                 <View style={{ margin: 20, backgroundColor: currentTheme.colorSecondary, width: "80%", borderRadius: 10 }} >
-                  <Image source={{ uri: item.item.image }} style={{ height: 150, width: "100%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
-
-                  </Image>
+                  <Image source={{ uri: item.item.image }} style={{ height: 150, width: "100%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}/>
                   <Text style={{ margin: 10, color: currentTheme.buttonColor, fontSize: 13 }}>
                     {item.item.data}
                   </Text>
