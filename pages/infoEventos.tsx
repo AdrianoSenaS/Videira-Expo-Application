@@ -25,14 +25,14 @@ const InfoEvento: React.FC = ({ route, navigation }: any) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
             <View style={{ width: '100%', height: 250, backgroundColor: currentTheme.colorSecondary }}>
                 <ImageBackground style={{ width: '100%', height: '100%' }} source={{ uri: image }} >
-                <View style={{ padding: 10, }}>
-                <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-                    <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
-                        <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-                        <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>{Destaques}</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+                    <View style={{ padding: 10, }}>
+                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+                            <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
+                                <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
+                                <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>{Destaques}</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </ImageBackground>
             </View>
             <View style={{ padding: 5 }}>
@@ -85,13 +85,13 @@ const InfoEvento: React.FC = ({ route, navigation }: any) => {
                     </View>
                 </View>
             </View>
-            <View style={{flex:1, alignItems:'center', justifyContent:'flex-end', padding:10}}>
-                            <TouchableOpacity
-                            onPress={()=>navigation.navigate('Ticket')}
-                             style={{backgroundColor:currentTheme.coloTextEvent, borderRadius:10, width:'100%', height:45, alignItems:'center', justifyContent:'center', marginBottom:20}}>
-                                <Text style={{fontSize:16, color:currentTheme.textColor, fontWeight:'600'}}>Tickets</Text>
-                            </TouchableOpacity>
-                    </View>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', padding: 10 }}>
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Ticket')}
+                    style={{ backgroundColor: currentTheme.coloTextEvent, borderRadius: 10, width: '100%', height: 45, alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                    <Text style={{ fontSize: 16, color: currentTheme.textColor, fontWeight: '600' }}>Tickets</Text>
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
     )
 }

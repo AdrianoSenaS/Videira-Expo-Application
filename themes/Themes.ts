@@ -14,7 +14,8 @@ export const lightTheme = {
   coloTextEvent:'#088CFB',
   colorSecondary:'rgba(143, 143, 143, 0.20)',
   logo: require('../assets/logotipo-videira.png'),
-  logoIgrejas: require('../assets/igrejas.jpg')
+  logoIgrejas: require('../assets/igrejas.jpg'),
+  ticket_logo: require('../assets/ticket_logo_branco.png'),
 
 };
 
@@ -33,5 +34,7 @@ export const darkTheme = {
   coloTextEvent:'#3AE176',
   colorSecondary:'rgba(143, 143, 143, 0.20)',
   logo: require('../assets/logo-branco.png'),
-  logoIgrejas: require('../assets/igrejas.jpg')
+  logoIgrejas: require('../assets/igrejas.jpg'),
+  ticket_logo: require('../assets/ticket_logo_black.png'),
+
 };

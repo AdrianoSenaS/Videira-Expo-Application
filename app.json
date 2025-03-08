@@ -11,10 +11,16 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png",
+      "manifest": {
+        "short_name": "MeuApp",
+        "theme_color": "#FFFFFF",
+        "background_color": "#000000",
+        "display": "standalone"
+      }
     },
     "android": {
-      "package": "com.anonymous.videiraChapadodoCu"
+      "package": "com.adriano.videiraChapadaodoCeu"
     },
     "plugins": [
       [

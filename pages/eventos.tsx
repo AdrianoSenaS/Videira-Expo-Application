@@ -115,7 +115,7 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
           <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Eventos</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView>
+      <ScrollView> 
         <View style={{ backgroundColor: currentTheme.backgroundColor }}>
           <View style={{ padding: 15, backgroundColor: currentTheme.backgroundColor }}>
             <Text style={{ color: currentTheme.textColor, fontSize: 20, fontWeight: 'bold' }}> Destaques</Text>
