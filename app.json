@@ -20,7 +20,11 @@
       }
     },
     "android": {
-      "package": "com.adriano.videiraChapadaodoCeu"
+      "package": "com.adriano.videiraChapadaodoCeu",
+      "permissions": [
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ]
     },
     "plugins": [
       [
@@ -30,6 +34,11 @@
           "remindersPermission": "O aplicativo precisa acessar seus lembretes"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "57fe1920-2101-45ce-9ec5-aaae386f9f95"
+      }
+    }
   }
 }

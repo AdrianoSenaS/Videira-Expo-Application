@@ -17,8 +17,6 @@ const Ticket: React.FC = ({ navigation }: any) => {
     const { theme } = useTheme();
     const currentTheme = theme === 'light' ? lightTheme : darkTheme
     const [quantity, setQuantity] = useState(1);
-    const [chekOut, SetChekOut] = useState(false);
-    const [SelectPayment, SetSelectPayment] = useState(String);
 
     // Função para aumentar a quantidade
     const increaseQuantity = () => setQuantity(quantity + 1);
@@ -31,70 +29,6 @@ const Ticket: React.FC = ({ navigation }: any) => {
     // Calcula o total
     const totalPrice = event.price * quantity;
 
-    if (chekOut === true) {
-        return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
-                <View style={{ width: '100%', height: 250, backgroundColor: currentTheme.backgroundColor }}>
-                    <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
-                    <View style={{ padding: 10, }}>
-                        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-                            <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => SetChekOut(false)}>
-                                <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-                                <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Voltar</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <View style={{ padding: 10, alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={{ color: currentTheme.textColor, fontWeight: 'bold', fontSize: 20 }}>Selecione um método de Pagamento</Text>
-                    </View>
-                    <View style={{ padding: 10, alignItems: 'center', justifyContent: 'center', flexDirection: 'row' }}>
-                        <TouchableOpacity onPress={() => SetSelectPayment("Pix")}>
-                            <View style={{ padding: 10, margin: 5, width: 150, height: 100, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', borderWidth: 1, borderRadius: 10, borderColor: currentTheme.bordercolor }}>
-                                <Image source={require('../assets/pix.png')} style={{ width: 50, height: 50 }} />
-                                <Text style={{ color: currentTheme.textColor, fontSize: 20 }}>PIX</Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => SetSelectPayment("Cartao")}>
-                            <View style={{ padding: 10, margin: 5, width: 150, height: 100, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', borderWidth: 1, borderRadius: 10, borderColor: currentTheme.bordercolor }}>
-                                <Image source={require('../assets/cartao.png')} style={{ width: 50, height: 50 }} />
-                                <Text style={{ color: currentTheme.textColor, fontSize: 20 }}>CARTÃO</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                    {(() => {
-                        if (SelectPayment === "Pix") {
-                            return (
-                                <View>
- <Text>Cartão</Text>
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', padding: 10 }}>
-                <TouchableOpacity
-                    onPress={() => SetChekOut(true)}
-                    style={{ backgroundColor: currentTheme.coloTextEvent, borderRadius: 10, width: '100%', height: 45, alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Text style={{ fontSize: 16, color: currentTheme.textColor, fontWeight: '600' }}>Avançar para Pagamento</Text>
-                </TouchableOpacity>
-            </View>
-                                </View>
-                            )
-                        }
-                        if (SelectPayment === "Cartao") {
-                            return (
-                                <View>
-                                    <Text>Cartão</Text>
-                                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', padding: 10 }}>
-                <TouchableOpacity
-                    onPress={() => SetChekOut(true)}
-                    style={{ backgroundColor: currentTheme.coloTextEvent, borderRadius: 10, width: '100%', height: 45, alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Text style={{ fontSize: 16, color: currentTheme.textColor, fontWeight: '600' }}>Avançar para Pagamento</Text>
-                </TouchableOpacity>
-            </View>
-                                </View>
-                            )
-                        }
-                    })()}
-                </View>
-            </SafeAreaView>
-        )
-    }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
             <View style={{ width: '100%', height: 250, backgroundColor: currentTheme.backgroundColor }}>
@@ -157,18 +91,18 @@ const Ticket: React.FC = ({ navigation }: any) => {
                             <View style={{ flexDirection: "row", alignItems: "center", marginRight: 10 }}>
                                 <TouchableOpacity
                                     onPress={decreaseQuantity}
-                                    style={{ padding: 10, backgroundColor: currentTheme.coloTextEvent, borderRadius: 5 }}
+                                    style={{ padding: 10, backgroundColor: currentTheme.buttonColor, borderRadius: 5 }}
                                 >
-                                    <Text style={{ color: currentTheme.textColor, fontSize: 18 }}>−</Text>
+                                    <Text style={{ color: '#fff',fontSize: 18 }}>−</Text>
                                 </TouchableOpacity>
 
                                 <Text style={{ color: currentTheme.textColor, marginHorizontal: 15, fontSize: 18 }}>{quantity}</Text>
 
                                 <TouchableOpacity
                                     onPress={increaseQuantity}
-                                    style={{ padding: 10, backgroundColor: currentTheme.coloTextEvent, borderRadius: 5 }}
+                                    style={{ padding: 10, backgroundColor: currentTheme.buttonColor, borderRadius: 5 }}
                                 >
-                                    <Text style={{ color: currentTheme.textColor, fontSize: 18 }}>+</Text>
+                                    <Text style={{ color: '#fff', fontSize: 18 }}>+</Text>
                                 </TouchableOpacity>
                             </View>
 
@@ -179,13 +113,14 @@ const Ticket: React.FC = ({ navigation }: any) => {
             </View>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', padding: 10 }}>
                 <TouchableOpacity
-                    onPress={() => SetChekOut(true)}
-                    style={{ backgroundColor: currentTheme.coloTextEvent, borderRadius: 10, width: '100%', height: 45, alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Text style={{ fontSize: 16, color: currentTheme.textColor, fontWeight: '600' }}>Avançar para Pagamento</Text>
+                    
+                    style={{ backgroundColor: currentTheme.buttonColor, borderRadius: 10, width: '100%', height: 45, alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                    <Text style={{ fontSize: 16, color: '#fff', fontWeight: '600' }}>Avançar para Pagamento</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
     )
+   
 
 }
 

@@ -11,7 +11,7 @@ import OpenTel from "../services/OpenTel";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import OpenInstagram from "../services/OpenInstagram";
 
-const VideiraScreen: React.FC = () => {
+const VideiraScreen:  React.FC = ({ navigation }: any) => {
     const { theme } = useTheme();
     const currentTheme = theme === 'light' ? lightTheme : darkTheme;
     let Pastor = 'Jozzueh Castro'

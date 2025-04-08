@@ -9,7 +9,9 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@dr.pogodin/react-native-fs": "^2.32.1",
     "@expo/metro-runtime": "~4.0.0",
+    "@react-native-picker/picker": "2.9.0",
     "@react-navigation/material-top-tabs": "^7.1.0",
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/stack": "^7.1.1",
@@ -17,18 +19,25 @@
     "expo": "~52.0.23",
     "expo-calendar": "~14.0.5",
     "expo-cli": "^6.3.12",
+    "expo-file-system": "~18.0.12",
+    "expo-intent-launcher": "~12.0.2",
     "expo-status-bar": "~2.0.0",
+    "expo-web-browser": "~14.0.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.5",
     "react-native-appearance": "^0.3.4",
+    "react-native-blob-util": "^0.21.2",
     "react-native-gesture-handler": "^2.21.2",
     "react-native-open-maps": "^0.4.3",
     "react-native-pager-view": "6.5.1",
+    "react-native-pdf": "^6.7.7",
     "react-native-reanimated": "^3.16.6",
     "react-native-safe-area-context": "^5.0.0",
     "react-native-screens": "^4.4.0",
-    "react-native-web": "~0.19.13"
+    "react-native-web": "~0.19.13",
+    "react-native-webview": "13.12.5",
+    "expo-dev-client": "~5.0.19"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

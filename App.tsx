@@ -16,12 +16,13 @@ import PalavaraScreen from './pages/plavras';
 import InfoIgrejaScreen from './pages/infoIgreja';
 import InfoEvento from './pages/infoEventos';
 import InfoCursos from './pages/infoCursos';
+import EditarContaScreen from './pages/EditarContaScreen';
+import LeitorPDFScreen from './pages/LeitorPDFScreen';
 import Ticket from './pages/Tickets';
-
 
 const Stack = createStackNavigator();
 
-const App: React.FC = () => {
+const  App: React.FC = ({ route, navigation }: any) => {
   return (
     <ThemeProvider>
       <NavigationContainer >
@@ -39,7 +40,9 @@ const App: React.FC = () => {
           <Stack.Screen name='InfoIgreja' component={InfoIgrejaScreen} options={{ headerShown: false }} />
           <Stack.Screen name='InfoEvento' component={InfoEvento} options={{ headerShown: false }} />
           <Stack.Screen name='InfoCusrsos' component={InfoCursos} options={{ headerShown: false }} />
-          <Stack.Screen name='Ticket' component={Ticket} options={{ headerShown: false }} />
+          <Stack.Screen name="EditarConta" component={EditarContaScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="LeitorPDFScreen" component={LeitorPDFScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Ticket" component={Ticket} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>

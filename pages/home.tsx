@@ -10,8 +10,7 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Entypo from '@expo/vector-icons/Entypo';
 
-
-const HomeScreen: React.FC<any> = ({ navigation }) => {
+const HomeScreen: React.FC = ({ route, navigation }: any) => {
   const { theme, toggleTheme } = useTheme();
   let currentTheme = theme === 'light' ? lightTheme : darkTheme;
   return (
@@ -26,11 +25,6 @@ const HomeScreen: React.FC<any> = ({ navigation }) => {
             <TouchableOpacity style={{ paddingRight: 30 }} onPress={toggleTheme}>
               <Feather name={currentTheme.iconTheme} size={24} color={currentTheme.textColor} />
             </TouchableOpacity>
-
-            <TouchableOpacity style={{ paddingRight: 30 }} onPress={() => navigation.navigate('Configuracao')}>
-              <Feather name="settings" size={24} color={currentTheme.textColor} />
-            </TouchableOpacity>
-
             <TouchableOpacity onPress={() => navigation.navigate('Conta')} style={{ paddingRight: 10 }}>
               <Feather name="user" size={24} color={currentTheme.textColor} />
             </TouchableOpacity>

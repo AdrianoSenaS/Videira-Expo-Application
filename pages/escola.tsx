@@ -4,6 +4,8 @@ import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, FlatList, Scroll
 import { useTheme } from '../themes/ThemeContext';
 import { lightTheme, darkTheme } from '../themes/Themes';
 import Ionicons from '@expo/vector-icons/Ionicons';
+
+
 const EscolaSrecreen: React.FC = ({ navigation }: any) => {
   const { theme } = useTheme();
   const currentTheme = theme === 'light' ? lightTheme : darkTheme;
@@ -111,7 +113,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
       <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start', marginTop: 10 }}>
         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }} onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back" size={30} color={currentTheme.buttonColor} />
-          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Eventos</Text>
+          <Text style={{ color: currentTheme.buttonColor, fontSize: 18 }}>Escola</Text>
         </TouchableOpacity>
       </View>
       <ScrollView>
@@ -139,7 +141,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
                     if( item.item.checkout !== ''){
                       return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end', marginTop:10, marginLeft:10}}>
                         <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
-                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                          <Text style={{color: '#fff',}}>{item.item.checkout}</Text>
                         </View>
                       </View>
                     }
@@ -175,7 +177,7 @@ const EscolaSrecreen: React.FC = ({ navigation }: any) => {
                     if( item.item.checkout !== ''){
                       return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end'}}>
                         <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
-                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                          <Text style={{color: '#fff',}}>{item.item.checkout}</Text>
                         </View>
                       </View>
                     }

@@ -138,7 +138,7 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
                     if( item.item.checkout !== ''){
                       return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end', marginTop:10, marginLeft:10}}>
                         <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
-                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                          <Text style={{color: '#fff',}}>{item.item.checkout}</Text>
                         </View>
                       </View>
                     }
@@ -174,7 +174,7 @@ const EventoSreen: React.FC = ({ navigation }: any) => {
                     if( item.item.checkout !== ''){
                       return <View style={{flex:1, alignItems:'flex-start', justifyContent:'flex-end'}}>
                         <View style={{alignItems:'center', justifyContent:'center', backgroundColor:currentTheme.coloTextEvent, borderRadius:10, padding:5, paddingLeft:10, paddingRight:10 }}>
-                          <Text style={{color:currentTheme.textColor}}>{item.item.checkout}</Text>
+                          <Text style={{color: '#fff',}}>{item.item.checkout}</Text>
                         </View>
                       </View>
                     }
