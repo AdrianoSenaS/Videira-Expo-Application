@@ -19,6 +19,7 @@ import InfoCursos from './pages/infoCursos';
 import EditarContaScreen from './pages/EditarContaScreen';
 import LeitorPDFScreen from './pages/LeitorPDFScreen';
 import Ticket from './pages/Tickets';
+import BlibliaScreen from './pages/Biblia';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,7 @@ const  App: React.FC = ({ route, navigation }: any) => {
           <Stack.Screen name="EditarConta" component={EditarContaScreen} options={{ headerShown: false }} />
           <Stack.Screen name="LeitorPDFScreen" component={LeitorPDFScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Ticket" component={Ticket} options={{ headerShown: false }} />
+          <Stack.Screen name="Biblia" component={BlibliaScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>

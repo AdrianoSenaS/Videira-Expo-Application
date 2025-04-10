@@ -14,7 +14,12 @@ const HomeScreen: React.FC = ({ route, navigation }: any) => {
   const { theme, toggleTheme } = useTheme();
   let currentTheme = theme === 'light' ? lightTheme : darkTheme;
   return (
+
     <SafeAreaView style={{ flex: 1, backgroundColor: currentTheme.backgroundColor }}>
+      <StatusBar
+        barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
+        backgroundColor={currentTheme.backgroundColor}
+      />
       <StatusBar barStyle={theme === 'light' ? 'dark-content' : 'light-content'} />
       <ImageBackground source={currentTheme.backgroundImage} style={{ flex: 1, justifyContent: 'center', width: '100%' }}>
         <View style={{ justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', backgroundColor: currentTheme.HomeColor }}>
@@ -68,15 +73,25 @@ const HomeScreen: React.FC = ({ route, navigation }: any) => {
                 <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Ofertas</Text>
               </View>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
+                <TouchableOpacity onPress={() => navigation.navigate('Biblia')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
+                  <Entypo name="open-book" size={70} color={currentTheme.textColor} />
+                </TouchableOpacity>
+                <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Bíblia</Text>
+
+              </View>
+             
+            </View>
+
+
+
+            <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', alignContent: 'center', marginTop: 20 }}>
+            <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Palavras')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
                   <Entypo name="open-book" size={70} color={currentTheme.textColor} />
                 </TouchableOpacity>
                 <Text style={{ color: currentTheme.textColor, fontSize: 16, marginTop: 5 }}>Palavra da</Text>
                 <Text style={{ color: currentTheme.textColor, fontSize: 16 }}>célula</Text>
               </View>
-            </View>
-
-            <View style={{ justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row', alignContent: 'center', marginTop: 20 }}>
               <View style={{ alignItems: 'center', width: 120, height: 150 }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Endereco')} style={{ alignItems: 'center', justifyContent: 'center', width: 90, height: 90, borderRadius: 20, borderStyle: 'solid', borderWidth: 2, borderColor: currentTheme.bordercolor, backgroundColor: currentTheme.buttonColorHome }}>
                   <MaterialCommunityIcons name="google-maps" size={70} color={currentTheme.textColor} />
